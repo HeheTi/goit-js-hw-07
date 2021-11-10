@@ -27,13 +27,13 @@ function onGettingUrlOfLargeImage(e) {
   e.preventDefault();
 
   if (e.target === e.currentTarget) return;
+
   const instance = basicLightbox.create(`
     <img src="${e.target.dataset.source}">`);
 
   instance.show();
 
   const onCloseModalEsc = (e) => {
-    console.log(e.code);
     if (e.code === "Escape") {
       instance.close();
       window.removeEventListener("keydown", onCloseModalEsc);
