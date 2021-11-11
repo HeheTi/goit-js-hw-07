@@ -24,7 +24,7 @@ const renderGalleryMarckup = (array) => {
 
 renderGalleryMarckup(galleryItems);
 
-const lightbox = new SimpleLightbox(".gallery .gallery__link", {
+new SimpleLightbox(".gallery .gallery__link", {
   captions: true,
   captionsData: "alt",
   captionPosition: "bottom",
